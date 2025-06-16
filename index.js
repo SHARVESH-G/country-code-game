@@ -13,7 +13,7 @@ let dataBase = new pg.Client({
     user: 'postgres',
     host: 'localhost',
     database: 'world',
-    password: 'Ram32694',
+    password: 'password',
     port: 5432,
 });
 
