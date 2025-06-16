@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0f1a2b;
+  color: #f5f0e6;
+  font-family: monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #d1b271;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+h1:nth-of-type(2) {
+  font-size: 2.2rem;
+  color: #e8d3a6;
+  font-style: italic;
+  margin-bottom: 40px;
+}
+
+#countryname{
+    border: solid 4px rgb(0, 221, 255);
+    padding: 25px;
+    border-radius: 25px;
+}
+
+form[action='/flaggame']{
+  background-color: #fdfaf5;
+  color: #1d1d1d;
+  border: 1px solid #d8c9a6;
+  padding: 40px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  border: 1px solid #c6b8a2;
+  border-radius: 10px;
+  background-color: #fffefb;
+  color: #2c2c2c;
+  font-size: 1rem;
+}
+
+input[type="text"]::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #d1b271;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #bfa05f;
+}
+
+.score-wrapper {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: stretch;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.your-score, .high-score {
+  background-color: #1a2433;
+  padding: 20px 30px;
+  border-radius: 14px;
+  min-width: 220px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.your-score {
+  border: 2px solid #4db8ff;
+}
+
+.high-score {
+  border: 2px solid #d1b271;
+}
+
+.score-wrapper h2 {
+  font-size: 1.4rem;
+  color: #e8d3a6;
+  margin-bottom: 10px;
+}
+
+.score-wrapper p {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+form[action="/reset-score"] button {
+  margin-top: 30px;
+  padding: 12px 25px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1em;
+  background-color: #6a4e3b;
+  color: white;
+  border: 2px solid #8c6239;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+form[action="/reset-score"] button:hover {
+  background-color: #4e3629;
+  transform: scale(1.05);
+}
+
+
+#hint{
+    margin-top: 25px;
+}
+
+#answer{
+    cursor: pointer;
+    opacity: 0%;
+    transition: opacity 0.5s ease;
+}
+
+#answer:hover{
+    opacity: 100%;
+}

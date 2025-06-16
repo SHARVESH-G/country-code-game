@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Country Code Game</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+  <body>
+    <h1>Welcome To Country Code Game</h1>
+    <h1 id="countryname"><%= a.countrycode %></h1>
+
+    <form action="/flaggame" method="POST">
+      <input
+        type="text"
+        name="countryCode"
+        placeholder="Enter Country Code"
+        value=""
+        autofocus
+      />
+      <input type="submit" value="Submit" />
+      <h3 id="hint">Hint - <span id="answer"><%=a.name%></span></h3>
+    </form>
+
+    <div class="score-wrapper">
+      <div class="your-score">
+        <h2>Your Score</h2>
+        <p><%= score %></p>
+      </div>
+      <div class="high-score">
+        <h2>Current High Score</h2>
+        <p><%= highscore %></p>
+      </div>
+    </div>
+    <form action="/reset-score" method="POST">
+      <button type="submit">Reset Highscore</button>
+    </form>
+  </body>
+</html>
